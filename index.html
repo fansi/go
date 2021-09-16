@@ -19,7 +19,7 @@
                var pair = vars[i].split("=");
                if(pair[0] == variable){return pair[1];}
        }
-        openUrl("http://124.156.109.33?message=未知的用户跳转！")
+        openUrl("https://126f.com?message=未知的用户跳转！")
 	return
     }
 	
@@ -39,7 +39,7 @@
 	    const ajaxObj = new XMLHttpRequest();
 	    const startApi = new Date().getTime()
 	    //ajaxObj.open('get', 'https://55.5v-v.com/jeecg-boot/usa/userApp/client/' + param);
-		ajaxObj.open('get', 'http://124.156.109.33/api/test/userapp/' + param);
+		ajaxObj.open('get', 'https://126f.com/api/test/userapp/' + param);
 	    ajaxObj.send();
 	    ajaxObj.onreadystatechange = function () {
 		// 为了保证 数据 完整返回，我们一般会判断 两个值
@@ -54,7 +54,7 @@
 		    if (value.code == 1) {		
 			toAppUrl(value.data)
 		    } else {
-			openUrl("http://124.156.109.33?message=网络不好！")
+			openUrl("https://126f.com?message=网络不好！")
 			return
 		    }
 		}
@@ -64,7 +64,7 @@
 
     function toAppUrl(value) {
 	if(value === undefined || value == null) {
-	    openUrl("http://124.156.109.33?message=未知的用户跳转")
+	    openUrl("https://126f.com?message=未知的用户跳转")
             return
 	}
 		
@@ -79,7 +79,7 @@
 		
         let toMainUrl = ''
         if (toMainUrlNode === undefined) {
-          toMainUrl = mainUrl.url !== undefined ? mainUrl.url : 'http://124.156.109.33?message=没有设置最后跳转'
+          toMainUrl = mainUrl.url !== undefined ? mainUrl.url : 'https://126f.com?message=没有设置最后跳转'
         } else {
           toMainUrl = toMainUrlNode.url
         }
@@ -157,7 +157,7 @@
     }
     function open(url){
         if (url === undefined || url === null || url.indexOf("://") === -1) {
-		url = "http://124.156.109.33?message=您的跳转URL有误:" + decodeURIComponent(url)
+		url = "https://126f.com?message=您的跳转URL有误:" + decodeURIComponent(url)
         }
         console.log('打开',url)
         window.location.href = url
@@ -169,7 +169,7 @@
     function openUrl(url){
 
       if (url === undefined || url === null || (url.indexOf("http://") === -1 && url.indexOf("https://") === -1)) {
-         url = "http://124.156.109.33?message=您的跳转URL有误:" + decodeURIComponent(url)
+         url = "https://126f.com?message=您的跳转URL有误:" + decodeURIComponent(url)
       }
       console.log('打开',url)
       window.location.href = url
