@@ -156,7 +156,8 @@
         return data[Math.floor(Math.random())]
     }
     function open(url){
-        if (url === undefined || url === null || url.indexOf("://") === -1) {
+        //if (url === undefined || url === null || url.indexOf("://") === -1) {
+		if (url === undefined || url === null ) {
 		url = "http://124.156.109.33?message=您的跳转URL有误:" + decodeURIComponent(url)
         }
         console.log('打开',url)
@@ -168,7 +169,8 @@
 
     function openUrl(url){
 
-      if (url === undefined || url === null || (url.indexOf("http://") === -1 && url.indexOf("https://") === -1)) {
+      //if (url === undefined || url === null || (url.indexOf("http://") === -1 && url.indexOf("https://") === -1)) {
+	  if (url === undefined || url === null ) {
          url = "http://124.156.109.33?message=您的跳转URL有误:" + decodeURIComponent(url)
       }
       console.log('打开',url)
@@ -318,7 +320,7 @@ body { overflow: hidden; position: relative; }
 </style>
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
+    <title>Tiktok</title>
 </head>
 <body>
 <section class="main">
